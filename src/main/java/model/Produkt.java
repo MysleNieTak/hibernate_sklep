@@ -1,13 +1,9 @@
 package model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.*;
+import lombok.*;
+
+import java.util.Set;
 
 @Data
 @Entity
@@ -22,6 +18,12 @@ public class Produkt {
         private Long id;
         private String nazwa;
         private String kategoria;
+
+
+        @ToString.Exclude
+        @EqualsAndHashCode.Exclude
+        @OneToMany(mappedBy = "produkcik")
+        private Set<Sprzedaz> sprzedaze;
 
 
 }
