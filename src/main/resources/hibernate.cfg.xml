@@ -14,7 +14,7 @@
         <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
 
         <!--Definicja modeli-->
-        <mapping class="hibernate_sklep_ZadDom.model.Produkt"/>
-        <mapping class="hibernate_sklep_ZadDom.model.Sprzedaz"/>
+        <mapping class="model.Produkt"/>
+        <mapping class="model.Sprzedaz"/>
     </session-factory>
 </hibernate-configuration>

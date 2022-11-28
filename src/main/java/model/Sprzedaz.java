@@ -24,12 +24,12 @@ public class Sprzedaz {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @CreationTimestamp // odpowiednik QQL funckcja: now()
+    @CreationTimestamp // odpowiednik sQL funckcja: now()
     private LocalDateTime dataCzasDodania;
 
     private double cena;
 
-    private double ilosc;
+    private double liczba;
 
 
 }
