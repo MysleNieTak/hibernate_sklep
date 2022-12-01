@@ -26,6 +26,7 @@ public class Main_dodajSprzedaz {
 
             if(szukanyProdukt!=null){
 
+
                 Sprzedaz nowaSprzedaz = Sprzedaz.builder()
                         .liczba(liczba)
                         .cena(cena)

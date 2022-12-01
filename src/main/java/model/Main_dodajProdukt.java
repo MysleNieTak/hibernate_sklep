@@ -17,12 +17,14 @@ public class Main_dodajProdukt {
             System.out.println("Żeby dodać produkt, podaj nazwę:");
             String nazwa = scanner.nextLine();
 
-            String kategoria =null;
+            String kategoriaProduktu =null;
             do {
-                System.out.println("Podaj kategorię produktu (żywność/napoje/inne):");
-                kategoria = scanner.nextLine();
-            } while (!kategoria.equalsIgnoreCase("żywność")&& !kategoria.equalsIgnoreCase("napoje")&&
-                    !kategoria.equalsIgnoreCase("inne"));
+                System.out.println("Podaj kategorię produktu wielkimi literami (żywność/napoje/inne):");
+                kategoriaProduktu = scanner.nextLine();
+            } while (!kategoriaProduktu.equalsIgnoreCase("żywność")&& !kategoriaProduktu.equalsIgnoreCase("napoje")&&
+                    !kategoriaProduktu.equalsIgnoreCase("inne"));
+
+            Kategoria kategoria = Kategoria.valueOf(kategoriaProduktu);
 
                 Produkt produkt = Produkt.builder()
                         .nazwa(nazwa)

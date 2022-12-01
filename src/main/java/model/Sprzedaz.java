@@ -28,6 +28,9 @@ public class Sprzedaz {
 
     private double liczba;
 
+    @Enumerated(value = EnumType.STRING)
+    private Kategoria kategoria;
+
     @ManyToOne
     private Produkt produkcik;
 

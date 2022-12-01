@@ -17,13 +17,14 @@ public class Produkt {
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
         private String nazwa;
-        private String kategoria;
+
+        @Enumerated(value = EnumType.STRING)
+        private Kategoria kategoria;
 
 
         @ToString.Exclude
         @EqualsAndHashCode.Exclude
         @OneToMany(mappedBy = "produkcik")
         private Set<Sprzedaz> sprzedaze;
-
 
 }
